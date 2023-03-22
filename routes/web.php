@@ -19,4 +19,5 @@ $router->get('/', function () use ($router) {
 
 $router->post('/dates', ['uses' => 'DateController@store' ]);
 $router->get('/dates', ['uses' => 'DateController@index' ]);
-
+$router->get('/datestz', ['uses' => 'DateController@getDateTimeForAllTimezones' ]);
+$router->get('/datesspecifictz', ['uses' => 'DateController@getDateTimeForTimezone' ]);
